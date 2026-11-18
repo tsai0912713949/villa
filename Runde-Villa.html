@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1YMTWQ4YP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B1YMTWQ4YP');
+    </script>
+    <meta property="og:title" content="【北屯大貴段｜潤德莊園】預約森林裡的世外桃源"> 
+    <meta property="og:description" content="以初始成本，搶佔「資產原始紅利」">
+    <meta property="og:image" content="https://raw.githubusercontent.com/hao713949.github.io/Dagui-Section/IMG_6482.JPG"> 
+    <meta property="og:url" content="https://hao713949.github.io/Dagui-Section/villa.html">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>【北屯大貴段｜潤德莊園】預約森林裡的世外桃源：與知己為鄰，讓資產定錨</title>
+    <link rel="preload" as="image" href="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-deep: #3A3F35;
+            --forest-mid: #595959;
+            --gold-accent: #A69C85;
+            --paper-texture: #EFECE5;
+            --text-dark: #2C332D;
+            --bg-dark-section: #0F1A13;
+            --danger-red: #8B0000;
+            --nav-height: 60px;
+        }
+
+        /* 基礎優化 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--paper-texture);
+            color: var(--text-dark);
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px; 
+            text-rendering: optimizeLegibility;
+        }
+
+        h1, h2, h3, h4, .serif { font-family: 'Noto Serif TC', serif; font-weight: 900; }
+
+        /* --- 燈箱功能樣式 --- */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 20000;
+            cursor: default;
+            padding: 20px;
+            user-select: none;
+        }
+        .lightbox-overlay img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            cursor: zoom-out;
+        }
+        .lightbox-caption {
+            color: var(--gold-accent);
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            z-index: 20001;
+        }
+        .lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); }
+        .lb-prev { left: 20px; }
+        .lb-next { right: 20px; }
+
+        .clickable-map { cursor: zoom-in; transition: 0.3s; width: 100%; height: auto; }
+        .clickable-map:hover { opacity: 0.9; }
+
+        /* --- 頂部導覽列 --- */
+        .top-nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: 10000;
+            padding: 0 5%;
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(27, 48, 34, 0.1);
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .top-nav::-webkit-scrollbar { display: none; }
+        
+        .top-nav::after {
+            content: "";
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 30px;
+            background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+            pointer-events: none;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: var(--forest-deep);
+            font-size: 0.95rem; 
+            font-weight: 700;
+            padding: 0 18px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .top-nav a:hover { color: var(--gold-accent); }
+
+        /* --- 按鈕與裝飾 --- */
+        .query-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 16px 32px;
+            background-color: var(--forest-deep);
+            color: var(--gold-accent);
+            text-decoration: none;
+            border: 1px solid var(--gold-accent);
+            border-radius: 4px;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            -webkit-appearance: none;
+        }
+        
+        .query-btn:hover {
+            background-color: var(--forest-mid);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+        .query-btn:active { transform: scale(0.98); }
+
+        .decoration-line {
+            position: relative;
+            padding-left: 20px;
+            margin: 25px 0;
+        }
+        .decoration-line::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 5px; bottom: 5px;
+            width: 3px;
+            background-color: var(--gold-accent);
+        }
+
+        /* --- Hero --- */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 0 8%;
+            overflow: hidden;
+            background-color: var(--paper-texture);
+        }
+        .carousel-bg { 
+            position: absolute;
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            z-index: 1;
+        }
+        .carousel-item {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: carouselFade 36s infinite ease-in-out;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(249, 248, 244, 0.95) 45%, rgba(249, 248, 244, 0.2) 100%);
+            z-index: 2;
+        }
+        .hero-container {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+        }
+        .hero-content { flex: 1; max-width: 650px; }
+
+        .subtitle-decorated {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* --- 照片輪播區塊 --- */
+        .hero-gallery {
+            flex: 1;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(255,255,255,0.6);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(181, 164, 120, 0.2);
+            margin-top: 40px;
+        }
+
+        .main-display {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            cursor: zoom-in;
+        }
+
+        .main-display img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(27, 48, 34, 0.6);
+            color: var(--gold-accent);
+            padding: 12px 18px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-weight: bold;
+            user-select: none;
+            transition: 0.3s;
+            z-index: 10;
+            border: none;
+        }
+        .nav-arrow:hover { background: var(--forest-deep); }
+        .prev-arrow { left: 0; border-radius: 0 4px 4px 0; }
+        .next-arrow { right: 0; border-radius: 4px 0 0 4px; }
+
+        .thumb-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold-accent) transparent;
+        }
+        .thumb-scroll::-webkit-scrollbar { height: 4px; }
+        .thumb-scroll::-webkit-scrollbar-thumb { background: var(--gold-accent); border-radius: 10px; }
+
+        .thumb-item {
+            flex: 0 0 85px;
+            aspect-ratio: 1/1;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .thumb-item.active {
+            opacity: 1;
+            border-color: var(--gold-accent);
+        }
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(27, 48, 34, 0.8);
+            color: var(--gold-accent);
+            font-size: 0.8rem;
+            padding: 6px 5px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .carousel-item:nth-child(1) { background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa.jpg'); animation-delay: 0s; }
+        .carousel-item:nth-child(2) { background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa0.jpg'); animation-delay: 6s; }
+        .carousel-item:nth-child(3) { background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa1.jpg'); animation-delay: 12s; }
+        .carousel-item:nth-child(4) { background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa2.jpg'); animation-delay: 18s; }
+        .carousel-item:nth-child(5) { background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa3.jpg'); animation-delay: 24s; }
+        .carousel-item:nth-child(6) { background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/villa4.jpg'); animation-delay: 30s; }
+
+        @keyframes carouselFade {
+            0% { opacity: 0; transform: scale(1); }
+            4% { opacity: 0.35; } 
+            16.6% { opacity: 0.35; } 
+            21.6% { opacity: 0; transform: scale(1.05); } 
+            100% { opacity: 0; }
+        }
+
+        .hero h1 { 
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            color: var(--gold-accent); /* 修改此處即可，或者直接填入顏色碼如 #B5A478 */
+            letter-spacing: 2px; 
+            line-height: 1.25; 
+            margin-bottom: 20px; 
+        }
+        .hero .sub-title { 
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--forest-mid); 
+            display: block;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        section { padding: 100px 8%; position: relative; }
+        .section-tag { font-size: 0.8rem; letter-spacing: 4px; color: var(--gold-accent); display: block; margin-bottom: 15px; font-weight: 700; text-transform: uppercase; }
+        h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--forest-deep); margin-bottom: 40px; line-height: 1.4; }
+
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .info-card { 
+            background: #fff; padding: 35px; border-radius: 4px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+            display: flex; flex-direction: column;
+        }
+        .info-card h3 { color: var(--forest-mid); margin-bottom: 15px; font-size: 1.35rem; }
+
+        .reg-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+        .reg-box { 
+            background-color: var(--forest-deep); padding: 35px 10px; 
+            text-align: center; border-radius: 4px; 
+        }
+        .reg-num { display: block; color: var(--gold-accent); font-family: 'Noto Serif TC', serif; font-size: 2rem; font-weight: 900; margin-bottom: 5px; }
+        .reg-title { color: #FFFFFF; font-weight: 700; font-size: 1rem; margin-bottom: 10px; }
+        .reg-desc { color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.6; }
+
+        /* --- 行情資訊圖表樣式區 --- */
+        .chart-section-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 30px 0;
+            width: 100%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        
+        .chart-row {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            border-left: 6px solid #d1d5db;
+            transition: all 0.3s ease;
+        }
+        
+        /* 突出顯示重點項目（潤德莊園） */
+        .chart-row.highlight-project {
+            border-left-color: #8B0000; /* 配合網頁的 danger-red */
+            background: linear-gradient(135deg, #ffffff 0%, #fffbfb 100%);
+            box-shadow: 0 8px 30px rgba(139, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+        
+        .chart-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .chart-title-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* 寬度不夠時自動換行 */
+            gap: 8px;
+            flex: 1;
+        }
+        
+        .chart-label {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #1a202c;
+            letter-spacing: 0.5px;
+        }
+        
+        .chart-sub-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 400;
+        }
+        
+        .market-badge {
+            font-size: 0.75rem;
+            background: #8B0000;
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        /* 價格與備註容器 */
+        .chart-price-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+        
+        .chart-value {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #374151;
+            white-space: nowrap;
+        }
+        
+        .chart-row.highlight-project .chart-value {
+            color: #8B0000;
+            font-size: 1.25rem;
+            text-shadow: 0 1px 2px rgba(139, 0, 0, 0.1);
+        }
+
+        .chart-price-note {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 4px;
+            white-space: nowrap;
+            font-weight: normal;
+        }
+        
+        /* 長條圖外殼 */
+        .chart-bar-bg {
+            width: 100%;
+            height: 10px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* 長條圖填滿顏色（預設為 18-22 萬行情的森林綠） */
+        .chart-bar-fill {
+            height: 100%;
+            background: #3E5C46; /* 森林綠 */
+            border-radius: 10px;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* 潤德莊園專屬：金棕色漸層 */
+        .chart-row.highlight-project .chart-bar-fill {
+            background: linear-gradient(90deg, #D4AF37, #AA7C11); /* 金棕色漸層 */
+        }
+
+        /* 📱 手機端間距與排版優化 */
+        @media (max-width: 600px) {
+            .chart-section-container {
+                gap: 10px; /* 縮小項目之間的行距 */
+                margin: 15px 0;
+            }
+
+            .chart-row {
+                padding: 12px 16px; /* 縮減上下內邊距 */
+                gap: 8px; /* 縮短文字與長條圖之間的距離 */
+            }
+            
+            .chart-info {
+                flex-direction: column; 
+                align-items: flex-start;
+                gap: 6px; /* 標題與價格區的垂直距離 */
+            }
+            
+            .chart-title-group {
+                gap: 4px; /* 標籤、徽章、備註之間的間距 */
+                width: 100%;
+            }
+            
+            .chart-sub-label {
+                font-size: 0.85rem;
+                width: 100%;
+                margin-top: -2px;
+            }
+
+            .chart-price-container {
+                align-items: flex-start; /* 手機版價格與備註改靠左 */
+                text-align: left;
+                width: 100%;
+                margin-top: 2px;
+            }
+            
+            .chart-value {
+                font-size: 1.1rem;
+            }
+            
+            .chart-row.highlight-project .chart-value {
+                font-size: 1.2rem;
+            }
+
+            .chart-price-note {
+                font-size: 11px;
+                margin-top: 2px;
+                display: block; /* 確保備註在手機端一定獨立成行 */
+            }
+            
+            .chart-bar-bg {
+                height: 6px; /* 手機端長條圖細一點，更顯精緻 */
+            }
+        }
+
+        /* 表格手機端滑動優化 */
+        .table-container { 
+            background: white; padding: 20px; border-radius: 8px; 
+            overflow-x: auto; box-shadow: 0 12px 25px rgba(0,0,0,0.06); 
+            -webkit-overflow-scrolling: touch;
+            max-height: 85vh;
+            position: relative;
+        }
+        
+        .table-container thead th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        table { width: 100%; border-collapse: collapse; min-width: 800px; }
+        th { background: var(--forest-deep); color: white; padding: 18px; text-align: left; font-size: 0.95rem; white-space: nowrap; }
+        td { padding: 18px; border-bottom: 1px solid #f2f2f2; font-size: 0.95rem; }
+        .total-row { background: #fdfdfd; font-weight: 900; color: var(--forest-deep); border-top: 2px solid var(--forest-deep); }
+
+        .security-section { background-color: var(--bg-dark-section); color: #fff; }
+        .sec-h2 { color: #fff; }
+        .highlight-gold { color: var(--gold-accent); font-weight: 700; }
+        .sec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .sec-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 4px; }
+        .sec-card h4 { color: var(--gold-accent); font-size: 1.2rem; margin-bottom: 15px; }
+
+        .market-news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .news-card { 
+            background: #fff; padding: 30px; border-radius: 4px; 
+            border-top: 4px solid var(--gold-accent);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            display: flex; flex-direction: column;
+        }
+        .news-card img {
+            width: 100%; height: 200px;
+            object-fit: cover; border-radius: 4px;
+            margin-bottom: 25px; background: #eee;
+            cursor: zoom-in;
+        }
+        .price-highlight { color: var(--danger-red); font-size: 1.4rem; font-weight: 900; }
+        .news-link { color: var(--forest-mid); text-decoration: none; font-weight: 700; font-size: 0.95rem; border-bottom: 1px solid var(--gold-accent); align-self: flex-start; margin-top: auto; padding-top: 15px;}
+
+        .sale-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+        .sale-item {
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-left: 5px solid var(--gold-accent);
+            transition: 0.3s;
+        }
+        .sale-item:hover { transform: translateX(5px); }
+        .sale-info { flex: 1; }
+        .sale-info h4 { font-size: 1.15rem; color: var(--forest-deep); margin-bottom: 5px; }
+        .sale-info p { font-size: 0.9rem; color: #666; }
+        .sale-link-btn {
+            padding: 10px 20px;
+            background: var(--forest-deep);
+            color: var(--gold-accent);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .invest-insight-box {
+            background: var(--forest-deep); color: #fff; padding: 50px; 
+            border-radius: 4px; border-left: 8px solid var(--gold-accent);
+        }
+
+        .invest-tag-new { 
+            font-size: 1rem; color: var(--gold-accent); 
+            display: block; margin-bottom: 18px; 
+            font-weight: 900; letter-spacing: 2px;
+            animation: pulse-gold 2s infinite ease-in-out;
+        }
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .invest-title-new { font-size: clamp(1.3rem, 3.5vw, 2rem); margin-bottom: 20px; line-height: 1.4; }
+        .invest-content-new { font-size: 1rem; line-height: 1.8; color: rgba(255, 255, 255, 0.9); }
+
+        .map-container { width: 100%; height: 500px; margin-top: 25px; border-radius: 8px; overflow: hidden; background: #eee; border: 1px solid #ddd; position: relative; }
+        
+        /* 地圖文字標籤樣式 */
+        .map-overlay-label {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background: var(--danger-red);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            z-index: 5;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .map-overlay-label::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: var(--danger-red) transparent transparent;
+        }
+
+        .map-btn { 
+            display: block; width: 100%; max-width: 320px; padding: 18px; background: var(--forest-deep); 
+            color: var(--gold-accent); text-align: center; text-decoration: none; font-weight: 700; 
+            margin: 25px auto 0; letter-spacing: 1.5px; border-radius: 4px; transition: 0.3s;
+        }
+        .map-btn:hover { background: var(--forest-mid); }
+
+        /* Legacy Section 樣式 */
+        .legacy-section {
+            background-color: var(--paper-texture);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            padding: 120px 8%;
+        }
+        .legacy-text {
+            flex: 1;
+            max-width: 550px;
+        }
+        .legacy-tag {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: var(--gold-accent);
+            margin-bottom: 25px;
+            display: block;
+            font-weight: 700;
+        }
+        .legacy-h2 {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            line-height: 1.35;
+            color: var(--forest-deep);
+            margin-bottom: 35px;
+        }
+        .legacy-quote {
+            border-left: 2px solid var(--gold-accent);
+            padding-left: 30px;
+            margin-top: 45px;
+        }
+        .legacy-quote p {
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            color: var(--forest-mid);
+        }
+        
+        .legacy-slider-container {
+            flex: 1.2;
+            width: 100%;
+            max-width: 750px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 16 / 9;
+            background: #000;
+            position: relative;
+        }
+        .legacy-slider-item {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out, transform 8s ease-out;
+            transform: scale(1.1);
+        }
+        .legacy-slider-item.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* --- 手機端深度優化 --- */
+        @media (max-width: 1024px) {
+            .reg-grid { grid-template-columns: repeat(3, 1fr); }
+            .hero-container { flex-direction: column; align-items: flex-start; justify-content: center; }
+            .hero-gallery { max-width: 100%; width: 100%; }
+            .legacy-section { flex-direction: column; gap: 50px; padding: 100px 6%; }
+            .legacy-text { max-width: 100%; text-align: center; }
+            .legacy-quote { padding-left: 0; border-left: none; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 80px 6%; }
+            .hero { padding: 100px 6% 60px; height: auto; min-height: 100vh; }
+            .hero::after {
+                background: linear-gradient(to bottom, rgba(249, 248, 244, 0.98) 35%, rgba(249, 248, 244, 0.6) 70%, rgba(249, 248, 244, 0.2) 100%);
+            }
+            .hero-content { text-align: center; margin: 0 auto; width: 100%; }
+            .subtitle-decorated { justify-content: center; }
+            .decoration-line { 
+                padding-left: 0; 
+                margin: 30px auto; 
+                border-top: 1px solid var(--gold-accent); 
+                padding-top: 20px; 
+                text-align: justify;
+                word-break: break-all;
+                max-width: 90%;
+            }
+            .decoration-line::before { display: none; }
+            
+            /* 優化圖1字距不對稱與孤字落單 */
+            .decoration-line p {
+                text-wrap: balance; 
+                letter-spacing: 0.02em;
+            }
+
+            .top-nav { justify-content: flex-start; padding: 0 10px; }
+            .top-nav a { font-size: 1rem; padding: 0 15px; }
+
+            .reg-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .invest-insight-box { padding: 30px 20px; }
+            .map-container { height: 400px; }
+            .map-overlay-label { top: 45%; }
+            
+            /* 行情資訊手機優化 */
+            .sale-item { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .sale-link-btn { margin-left: 0; width: 100%; text-align: center; }
+            
+            h2 { font-size: 1.6rem; margin-bottom: 30px; text-wrap: balance; }
+            .info-card h3 { font-size: 1.4rem; }
+            .info-card p { font-size: 1.05rem; text-align: justify; }
+        }
+
+        @media (max-width: 480px) {
+            section { padding: 60px 5%; }
+            .hero h1 { font-size: 2.1rem; letter-spacing: 1px; text-wrap: balance; }
+            .hero .sub-title { font-size: 1.1rem; letter-spacing: 2px; }
+            .query-btn { width: 100%; padding: 18px 20px; font-size: 1.15rem; }
+
+            .reg-grid { grid-template-columns: 1fr; }
+            .reg-box { padding: 30px 20px; text-align: left; display: flex; flex-direction: column; align-items: flex-start; }
+            .reg-num { font-size: 2.2rem; margin-bottom: 8px; }
+            .reg-title { font-size: 1.1rem; margin-bottom: 12px; }
+            .reg-desc { 
+                font-size: 1rem; line-height: 1.6; padding-top: 10px;
+                border-top: 1px solid rgba(181, 164, 120, 0.3); width: 100%;
+            }
+            
+            .thumb-item { flex: 0 0 75px; }
+            .lightbox-nav { width: 45px; height: 45px; }
+            
+            .invest-title-new { font-size: 1.3rem; text-wrap: balance; } 
+            .invest-content-new { font-size: 0.95rem; text-align: justify; }
+            .legacy-h2 { font-size: 1.8rem; text-wrap: balance; }
+            .legacy-quote p { font-size: 1.05rem; line-height: 1.8; }
+            
+            .table-container { padding: 15px 10px; }
+            td, th { padding: 14px 10px; font-size: 0.9rem; }
+        }
+
+    </style>
+<style>
+    /* 手機端文字排版優化 */
+    body {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    /* 修正內文與標題字距 */
+    p, .content, .desc, .text-block {
+        text-align: justify;
+        text-justify: inter-ideograph;
+        letter-spacing: 0.05em; 
+        line-height: 1.8;      
+        word-break: break-all;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: 16px;
+        }
+        h1, h2, h3 {
+            letter-spacing: 0.1em !important;
+            line-height: 1.4 !important;
+        }
+        p {
+            letter-spacing: 0.03em !important; 
+            margin-bottom: 1.2em;
+        }
+    }
+
+    .hero-content p {
+        text-align: center !important; 
+        letter-spacing: 0.1em !important; 
+        line-height: 1.6;
+        word-break: keep-all; 
+        white-space: normal;
+        margin: 0 auto;
+        max-width: 90%; 
+    }
+
+    @media (max-width: 768px) {
+        .hero-content p {
+            font-size: 1.1rem !important;
+            letter-spacing: 0.05em !important; 
+            text-align: center !important;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div id="lightbox" class="lightbox-overlay" onclick="handleLightboxClick(event)">
+        <button class="lightbox-nav lb-prev" onclick="changeSlide(-1); event.stopPropagation();">❮</button>
+        <img id="lightbox-img" src="" alt="放大圖示" onclick="event.stopPropagation();">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+        <button class="lightbox-nav lb-next" onclick="changeSlide(1); event.stopPropagation();">❯</button>
+    </div>
+
+    <nav class="top-nav">
+        <a href="#page1">首頁</a>
+        <a href="#page2">核心價值</a>
+        <a href="#market-info">行情資訊</a>
+        <a href="#page5">土地概況</a>
+        <a href="#page4">圖資證明</a>
+        <a href="#page7">重要聲明</a>
+        <a href="#planning-doc">環境實景</a>
+        <a href="#page8">地理位置</a>
+    </nav>
+
+    <header class="hero" id="page1">
+        <div class="carousel-bg">
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+        </div>
+
+       <div class="hero-container">
+           <div class="hero-content">
+                <span class="sub-title serif" style="color: #3E5C46;">預約北屯森林裡的世外桃源</span>
+                <h1 class="main-title serif">大貴段｜潤德莊園</h1>
+                
+                <div class="subtitle-decorated">
+                    <p style="font-weight: 700; color: #3E5C46; font-size: 1.25rem; letter-spacing: 1px; margin: 0; text-wrap: balance;">不只是買地，更是取得價格主導權</p>
+                </div>
+                
+                <div class="decoration-line">
+                    <p style="font-size: 1.1rem; max-width: 700px; color: var(--text-dark); line-height: 1.8;">
+                        喚醒大坑沈睡的「兩萬坪 - 特二種住宅用地」<br>
+                        劃分 48 單元，約 24 認購席次。<br>
+                        任一席，皆享有『整體開發』的成本優勢。
+                    </p>
+                </div>
+                
+                <a href="https://hao713949.github.io/DAKENG-VILLA/project/ＮＷＥ認購單元.html" class="query-btn">
+                    查看席次與價格 ⇄
+                </a>
+                <p style="margin-top: 15px; color: var(--forest-mid); font-size: 0.95rem; font-weight: 500;">採預約制釋出｜為少數理解價值的人準備</p>
+            </div>
+       </div>
+    </header>
+
+    <div style="padding: 60px 8% 0;">
+        <div id="invest-insight" class="invest-insight-box">
+            <span class="invest-tag-new">FINAL CALL</span>
+            <h3 class="serif invest-title-new">認購倒計時，把握最後稀缺席次</h3>
+            <p class="invest-content-new">
+                在潤德莊園，買的不僅僅是土地，而一種「看得到、握得住」的尊嚴生活。這是一份給家人的承諾，也是一筆留給未來的資產。稀缺 24 席，先到先得。邀請您，在兩萬坪森林裡，預約一場優雅的永恆靜好。
+            </p>
+        </div>
+    </div>
+
+    <section id="page2">
+        <span class="section-tag">STRATEGIC VISION</span>
+        
+        <h2>【價格定錨：成本低於市場區間，進場即具價格優勢】</h2>
+        <p style="font-size: 1.15rem; margin-bottom: 35px; color: var(--forest-mid); max-width: 900px; line-height: 1.8; text-align: justify;">
+            當市場在追逐「現狀」的行情，您已洞察「未來」的位階。透過數據精準還原，周邊社區型特二建地價格來到 18~22 萬；入主『潤德莊園』，意味著您正以最具戰略優勢的成本落點，提前鎖定未來的增值空間。
+        </p>
+        <div class="grid-layout" style="margin-bottom: 80px;">
+            <div class="info-card" style="border-top: 4px solid var(--gold-accent);">
+                <h3>超值門檻*</h3>
+                <p>最新方案每坪再降約<span style="font-size: 1.4rem; color: var(--danger-red); font-weight: 900;">1 萬</span>  ，每坪價格約 <span style="font-size: 1.4rem; color: var(--danger-red); font-weight: 900;"> 7.53 萬</span> ，「用生地價格，買到開發完成的社區型別墅建地。」</p>
+            </div>
+            <div class="info-card" style="border-top: 4px solid var(--gold-accent);">
+                <h3>開發紅利</h3>
+                <p>透過合購建地與農地處分回饋，預計每坪可退回約 <span style="font-size: 1.4rem; color: var(--danger-red); font-weight: 900;">1.5 萬</span>，大幅降低實際成本。</p>
+            </div>
+            <div class="info-card" style="border-top: 4px solid var(--gold-accent);">
+                <h3>即刻溢價</h3>
+                <p>當同區以 <span style="font-size: 1.4rem; color: var(--danger-red); font-weight: 900;">15 - 18 萬/坪</span> 定價開局，您的進場成本已預留了翻倍的價值緩衝。利用團購優勢，完成一場「未戰先勝」的佈局。</p>
+            </div>
+        </div>
+
+        <h2>【地段優勢：百億醫療紅利核心，離塵不離城的防禦線】</h2>
+        <p style="font-size: 1.15rem; margin-bottom: 45px; color: var(--forest-mid); max-width: 900px; line-height: 1.8; text-align: justify;">
+            真正的尊嚴養老，源於「進退自如」的從容。
+        </p>
+        <div class="grid-layout" style="margin-bottom: 80px;">
+            <div class="info-card">
+                <h3>醫養防線</h3>
+                <p>距「台中市立醫院」百億醫療特區僅 <span style="font-weight:700; color:var(--forest-deep);">2.7 公里</span>，黃金 6 分鐘車程。健康是資產增值的最強後盾。</p>
+            </div>
+            <div class="info-card">
+                <h3>交通動線</h3>
+                <p>轉瞬銜接 <span style="font-weight:700; color:var(--forest-deep);">74 號快速道路</span>，緊鄰 50 米太原路。市心繁華與莊園寧靜，僅在咫尺。</p>
+            </div>
+            <div class="info-card">
+                <h3>品牌進場</h3>
+                <p>大陸建設、精湛建設相繼卡位。頂尖建商用實際布局，印證區域發展潛力。現在卡位，掌握的正是下一階段價值成長的先行位置。</p>
+            </div>
+        </div>
+
+        <h2>【五大核心優勢：賦予土地多元靈魂】</h2>
+        <div class="grid-layout">
+            <div class="info-card">
+                <h3>成熟封閉社區</h3>
+                <p>潤德莊園為高隱私封閉式私人社區，目前已完工 <span style="font-weight: 700; color: var(--forest-deep);">37 戶</span>，居住率高達 <span style="font-weight: 700; color: var(--forest-deep);">90%</span>，鄰里穩定成熟。</p>
+            </div>
+            <div class="info-card">
+                <h3>機能公設完整</h3>
+                <p>設有警衛室、資源回收室、景觀公園、籃球場、網球場與污水處理廠，無需妥協生活品質。</p>
+            </div>
+            <div class="info-card">
+                <h3>容積價值放大</h3>
+                <p>具備 40% 合法容積率。透過專業整合，有效容積率可達 <span style="font-weight:700; color:var(--forest-deep);">55%~58%</span>，實現開發效益最大化。</p>
+            </div>
+            <div class="info-card">
+                <h3>社區基建完備</h3>
+                <p>擁有 8~10 米寬道路，水、電、瓦斯、下水道工程全數完備，具備即刻動工的優越條件。</p>
+            </div>
+            <div class="info-card">
+                <h3>用途自主定義</h3>
+                <p>除了豪華別墅，更可規劃為專科診所、高隱私康養中心或私人招待所，開發主導權由您掌握。</p>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section id="market-info" class="market-info-section">
+        <span class="section-tag">MARKET INSIGHTS</span>
+        <h2>大坑風景區建地行情</h2> 
+        <p style="font-size: 1.15rem; margin-bottom: 25px; color: var(--forest-mid); max-width: 900px; text-wrap: balance;">
+             從 9 萬到 22 萬／坪，價格帶已明確分層
+        </p>
+
+        <div class="chart-section-container">
+            <div class="chart-row highlight-project">
+                <div class="chart-info">
+                    <div class="chart-title-group">
+                        <span class="chart-label">潤德莊園</span>
+                        <span class="market-badge">超值首選</span>
+                        <span class="chart-sub-label">（具規模之封閉式社區）</span>
+                    </div>
+                    <div class="chart-price-container">
+                        <span class="chart-value">（6）~ 7.6x 萬/坪</span>
+                        <span class="chart-price-note">均價 7.6x 萬 ‧ 每坪另可返利 1.5 萬</span>
+                    </div>
+                </div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 26%;"></div>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-info">
+                    <div class="chart-title-group">
+                        <span class="chart-label">風景區建地</span>
+                        <span class="chart-sub-label">（零星面積無法興建）</span>
+                    </div>
+                    <span class="chart-value">9 ~ 13 萬/坪</span>
+                </div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 37%;"></div>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-info">
+                    <div class="chart-title-group">
+                        <span class="chart-label">零星建地</span>
+                        <span class="chart-sub-label">（缺乏基礎建設，如同老丙建）</span>
+                    </div>
+                    <span class="chart-value">12 ~ 16 萬/坪</span>
+                </div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 46%;"></div>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-info">
+                    <div class="chart-title-group">
+                        <span class="chart-label">社區型建地</span>
+                        <span class="market-badge" style="background: #1B3022;"> 樸山村 </span> 
+                        <span class="chart-sub-label">（具規模之封閉式社區）</span>
+                    </div>
+                    <span class="chart-value">15 ~ 22 萬/坪</span>
+                </div>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill" style="width: 63%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="serif" style="margin: 60px 0 25px; color: var(--forest-deep);">區域待售案源分析</h3>
+        
+        <div class="sale-list">
+            <div class="sale-item">
+                <div class="sale-info">
+                    <h4>橫坑巷零星建地 <span class="price-highlight">12.44 萬/坪</span></h4>
+                    <p>零星特二建築用地｜北屯區大豐段</p>
+                </div>
+                <a href="https://hao713949.github.io/Dagui-Section/%E5%A4%A7%E8%B1%90778-5.html" target="_blank" class="sale-link-btn">案源連結 ↗</a>
+            </div>
+
+            <div class="sale-item">
+                <div class="sale-info">
+                    <h4>陸光七村風景區 <span class="price-highlight">15 萬/坪</span></h4>
+                    <p>風景區建地｜最小開發面積 1 公頃</p>
+                </div>
+                <a href="https://hao713949.github.io/Dagui-Section/%E5%A4%A7%E8%B2%B4%E9%A2%A8%E6%99%AF%E5%8D%80.html" target="_blank" class="sale-link-btn">案源連結 ↗</a>
+            </div>
+
+            <div class="sale-item">
+                <div class="sale-info">
+                    <h4>苧園巷特二建地 <span class="price-highlight">15.96 萬/坪</span></h4>
+                    <p>特二建築用地｜原始林地風貌｜</p>
+                </div>
+                <a href="https://www.sinyi.com.tw/buy/house/6035CP?breadcrumb=list" target="_blank" class="sale-link-btn">案源連結 ↗</a>
+            </div>
+
+            <div class="sale-item">
+                <div class="sale-info">
+                    <h4>台中莊園隱私宅邸 <span class="price-highlight">22,000萬</span></h4>
+                    <p>土地 602 坪｜基地面積 470 坪｜大貴段特二種住宅區</p>
+                </div>
+                <a href="https://www.pacific.com.tw/Object/ObjectDetail/?saleID=MS153046" target="_blank" class="sale-link-btn">案源連結 ↗</a>
+            </div>
+
+            <div class="sale-item">
+                <div class="sale-info">
+                    <h4>樸山村大別墅 <span class="price-highlight">12,800萬</span></h4>
+                    <p>土地 530.99 坪｜基地面積 221坪｜富貴天心開發區</p>
+                </div>
+                <a href="https://www.sinyi.com.tw/buy/house/81383T" target="_blank" class="sale-link-btn">案源連結 ↗</a>
+</div>
+        </div>
+
+        <div class="table-container" style="margin: 40px 0; border-top: 1px solid #ddd; padding-top: 40px;">
+            <h3 class="serif" style="margin-bottom:25px; color: var(--forest-deep); text-align: center; font-size: 1.25rem; text-wrap: balance;">區域實價案例：樸山村 『 土地實際價格 18 ~ 22 萬 』，土地公設比 52.7% 。</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>標的地號</th>
+                        <th>交易總價(萬)</th>
+                        <th>建物面積(坪)</th>
+                        <th>土地總面積(坪)</th>
+                        <th>基地面積</th>
+                        <th style="background: var(--gold-accent);">基地單價(萬/坪)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>96-67 地號</strong></td><td>9,200</td><td>147.54</td><td>659.62</td><td>311.99</td><td style="font-weight:700; color:var(--forest-deep);">18.41</td>
+                    </tr>
+                    <tr>
+                        <td><strong>96-68 地號</strong></td><td>9,800</td><td>146.93</td><td>596.89</td><td>282.37</td><td style="font-weight:700; color:var(--forest-deep);">22.68</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 10px; text-align: center;">(手機觀看請左右滑動表格 ⇄)</p>
+        </div>
+
+        <h3 class="serif" style="margin-bottom: 25px; color: var(--forest-deep);">重大投資與建設趨勢</h3>
+        <div class="market-news-grid">
+            <div class="news-card">
+                <img src="https://github.com/hao713949/Dagui-Section/blob/main/052700_20250527093422.jpg_1140x855.jpg?raw=true" alt="大坑『芳庭路壹號莊園』" onclick="openLightbox(this.src, '大坑『芳庭路壹號莊園』')">
+                <h4>大坑『芳庭路壹號莊園』開幕搶爆</h4>
+                <p style="text-align: justify;">雲品國際與米其林主廚聯手打造頂級宴會空間，訂單已排至明年，證明區域高端消費力驚人。</p>
+                <a href="https://tw.news.yahoo.com/%E5%8F%B0%E4%B8%AD-%E8%8A%B3%E5%BA%AD%E8%B7%AF%E5%A3%B9%E8%99%9F%E8%8E%8A%E5%9C%92-2-0%E7%94%AB%E9%96%8B%E5%B9%95%E8%B6%85%E5%A4%AF-%E5%B7%B2%E8%B6%85%E9%81%8E4%E5%8D%83%E6%A1%8C%E8%A8%82%E5%96%AE%E7%AB%9F%E5%B7%B2%E8%87%B3%E6%98%8E-013100537.html" target="_blank" class="news-link">閱讀新聞原文 ↗</a>
+            </div>
+
+            <div class="news-card">
+                <img src="https://github.com/hao713949/Dagui-Section/blob/main/%E7%B6%A0%E7%B7%9Aplus%E7%B6%A0%E5%BB%B6%E5%85%A8%E7%B7%9A%E7%A4%BA%E6%84%8F%E5%9C%96.png?raw=true" alt="捷運綠線延伸大坑" onclick="openLightbox(this.src, '捷運綠線延伸大坑')">
+                <h4>捷運綠線延伸大坑風景區</h4>
+                <p style="text-align: justify;">中捷綠線延伸計畫正式核定，全面提升山城觀光與休憩交通品質，串連市中心生活圈。</p>
+                <a href="https://www.taichung.gov.tw/8868/8872/9962/3220283" target="_blank" class="news-link">閱讀新聞原文 ↗</a>
+            </div>
+
+            <div class="news-card">
+                <img src="https://github.com/hao713949/Dagui-Section/blob/main/20250103701522.jpg?raw=true" alt="太和段複合式商場" onclick="openLightbox(this.src, '太和段複合式商場')">
+                <h4>太和段複合式商場BOT</h4>
+                <p style="text-align: justify;">市立醫院旁6.2億BOT正式簽約，將引進複合式商場機能，補足區域高端生活採買需求。</p>
+                <a href="https://www.ctee.com.tw/news/20250103701514-431206" target="_blank" class="news-link">閱讀新聞原文 ↗</a>
+            </div>
+
+            <div class="news-card">
+                <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/%E9%9B%B2%E5%93%81.png" alt="雲品國際「大坑森邸」" onclick="openLightbox(this.src, '雲品國際「大坑森邸」')">
+                 <h4>雲品國際「大坑溫泉Villa」<br><span style="font-size: 0.95rem; color: #666; font-weight: normal;">頂級高端生活產業</span></h4>
+                <p style="text-align: justify;">雲品打造頂級溫泉Villa、White Party 宴會廳「森邸」，證明該區域具備承載國際級高端生活的潛力。</p>
+                <a href="https://news.cnyes.com/news/id/5561629" target="_blank" class="news-link">閱讀新聞原文 ↗</a>
+            </div>
+
+            <div class="news-card">
+                <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/%E5%B8%82%E7%AB%8B%E9%86%AB%E9%99%A2.jpg" alt="百億醫療特區" onclick="openLightbox(this.src, '百億醫療特區')">
+                <h4>百億醫療特區<br><span style="font-size: 0.95rem; color: #666; font-weight: normal;">周邊房價看俏</span></h4>
+                <p style="text-align: justify;">隨著百億級醫療資源投入，大坑已從單純觀光轉向高端康養居住區，地價具強勁支撐。</p>
+                <a href="https://money.udn.com/money/story/5635/8749962" target="_blank" class="news-link">閱讀新聞原文 ↗</a>
+            </div>
+
+            <div class="news-card">
+                <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/%E6%A8%B8%E5%B1%B1%E6%9D%91.jpg" alt="大陸建設＆精湛建設" onclick="openLightbox(this.src, '大陸建設＆精湛建設')">
+                <h4>大陸建設＆精湛建設<br><span style="font-size: 0.95rem; color: #666; font-weight: normal;">打造台中版「青山鎮」</span></h4>
+                <p style="text-align: justify;">指標建商預計打造高隱私、高規格森林別墅聚落，區域價值正處於爆發前夕。</p>
+                <a href="https://www.wealth.com.tw/articles/eb721bcb-8bc7-40a4-b798-a708edad6472" target="_blank" class="news-link">閱讀新聞原文 ↗</a>
+            </div>
+        </div>
+
+        <div class="invest-insight-box">
+            <span class="invest-tag-new">INVESTMENT INSIGHT</span>
+            <h3 class="serif invest-title-new">跟隨百億資本的眼光：<br>「當資本已為大坑生活圈定調，您只需選擇正確的入場方式。」</h3>
+            <p class="invest-content-new">
+                大陸建設、雲品、精湛相繼進駐，不僅是房產開發，更是對區域價值的集體背書。在高端康養與住宅共鳴的當下，選擇具備完善基礎建設的『住宅區』，是提前佈局資產紅利的唯一路徑。
+            </p>
+        </div>
+    </section>
+
+    <section id="page5" style="background: #F1F2ED;">
+        <span class="section-tag">ASSET PORTFOLIO</span>
+        <h2>潤德莊園土地概況 - 最新</h2> <p style="font-size: 1.15rem; margin-bottom: 45px; color: var(--forest-mid); max-width: 900px; text-wrap: balance;">
+            ※ 認購單元總價，包含 A~D 土地。
+        </p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>土地分類</th><th>筆數</th><th>面積（坪）</th><th>備註</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>A. 特二種住宅用地</td><td>105 筆</td><td>15,753.14</td><td>劃分為48單元（包含專有及公設面積）</td></tr>
+                    <tr><td>B. 公設預撥地</td><td>3 筆</td><td>1,153.63</td><td>統一以信託登記管理</td></tr>
+                    <tr><td>C. 特二（變）住宅用地</td><td>1 筆</td><td>857.12</td><td>地號 487-223，統一以自益信託登記管理</td></tr>
+                    <tr><td>D. 農業用地</td><td>5 筆</td><td>1,444.42</td><td>地號 492 等五筆，以自益信託管理</td></tr>
+                    <tr class="total-row"><td>總計合購規模</td><td>114 筆</td><td>19,208.32</td><td>全部採一次性交易『取消487-100,487-101地號購買』</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="font-size: 0.85rem; color: #999; margin-top: 15px; text-align: center;">(手機觀看請左右滑動表格 ⇄)</p>
+    </section>
+
+    <section id="page4">
+        <span class="section-tag">REGULATORY & DOCUMENTATION</span>
+        <h2>建築規範：建築法規管制</h2>
+        <div class="reg-grid" style="margin-bottom: 65px;">
+            <div class="reg-box">
+                <span class="reg-num">20%</span>
+                <p class="reg-title">建蔽率</p>
+                <p class="reg-desc">讓 80% 的土地回歸森林：您的房子是從樹林裡長出來的。</p>
+            </div>
+            <div class="reg-box">
+                <span class="reg-num">40%</span>
+                <p class="reg-title">容積率</p>
+                <p class="reg-desc">垂直的留白，只為留住最完整的山巒景觀。</p>
+            </div>
+            <div class="reg-box">
+                <span class="reg-num">5M</span>
+                <p class="reg-title">建築退縮</p>
+                <p class="reg-desc">5 米深度退縮：以寬廣棟距，成就極致私密性。</p>
+            </div>
+            <div class="reg-box">
+                <span class="reg-num">1.5M</span>
+                <p class="reg-title">人行步道</p>
+                <p class="reg-desc">1.5 米森態廊道：讓回家成為一場林間漫步。</p>
+            </div>
+            <div class="reg-box">
+                <span class="reg-num">免計</span>
+                <p class="reg-title">停車空間</p>
+                <p class="reg-desc">停車空間不計入容積，最大化居住效益。</p>
+            </div>
+        </div>
+
+        <span class="section-tag">SITE DOCUMENTATION</span>
+        <h2>地籍圖資與分區證明</h2>
+        <div style="margin-bottom: 35px; border-left: 4px solid var(--gold-accent); padding-left: 20px;">
+            <h3 class="serif" style="color: var(--forest-deep); font-size: 1.4rem; margin-bottom: 10px;">土地使用分區管制要點</h3>
+            <p style="font-size: 1.05rem; color: var(--text-dark); font-weight: 500; line-height: 1.7; text-wrap: balance;">
+                供一般住宅、住宅別墅、原開發許可核准項目，及門診、零售、日常服務之場所使用為限
+            </p>
+        </div>
+
+        <div style="background:#fff; padding: 25px; border: 1px solid #eee; text-align: center; margin-bottom: 30px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+            <h3 class="serif" style="margin-bottom:20px; color: var(--forest-deep); font-size: 1.2rem;">公設地及合購地標示圖</h3>
+            <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/newmap.webp" alt="公設地及合購地標示圖" class="clickable-map" onclick="openLightbox(this.src, '公設地及合購地標示圖')" loading="lazy">
+            <p style="color: var(--gold-accent); font-weight: 700; margin-top: 15px; font-size: 1rem;">※ 買賣總價款已完整包含「公設地」及「合購地」。</p>
+        </div>
+        <div class="grid-layout">
+            <div style="background:#fff; padding:20px; border:1px solid #eee; text-align:center; border-radius:4px;">
+                <h3 class="serif" style="font-size: 1.1rem; margin-bottom:12px;">大坑細部計畫圖</h3>
+                <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/Zoning.jpg" alt="大坑細部計畫圖" class="clickable-map" onclick="openLightbox(this.src, '大坑細部計畫圖')" loading="lazy">
+            </div>
+            <div style="background:#fff; padding:20px; border:1px solid #eee; text-align:center; border-radius:4px;">
+                <h3 class="serif" style="font-size: 1.1rem; margin-bottom:12px;">都發局使用分區證明</h3>
+                <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/Zoning1.jpg" alt="都發局使用分區證明" class="clickable-map" onclick="openLightbox(this.src, '都發局使用分區證明')" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="page7" class="security-section">
+        <span class="section-tag" style="color: rgba(255,255,255,0.4);">INVESTMENT TERMS & SECURITY</span>
+        <h2 class="sec-h2 serif">配合事項聲明</h2>
+        <div class="grid-layout" style="margin-bottom: 65px; color: var(--text-dark);">
+            <div class="info-card">
+                <h3>賣方出售條件</h3>
+                <p>114 筆土地採一次性出售，不開放個別筆數處分。</p>
+            </div>
+            <div class="info-card">
+                <h3>付款構成</h3>
+                <p><strong>主約購地款：</strong>含權狀面積、公設地、公設預撥地、農地等。</p>
+                <p style="margin-top: 12px;"><strong>附約款：</strong>社區建設費、及相關規費。</p>
+            </div>
+            <div class="info-card">
+                <h3>交易時程</h3>
+                <p>預計 4.5 個月完成完整交易與產權過戶流程。</p>
+            </div>
+        </div>
+
+        <h2 class="sec-h2 serif">交易安全機制</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 45px; color: rgba(255,255,255,0.85); line-height: 1.8; text-wrap: balance;">
+            確保認購者資金安全性—<span class="highlight-gold">若案件不成，交易取消，100% 原款退回。</span>
+        </p>
+        <div class="sec-grid">
+            <div class="sec-card">
+                <h4>募資未達標</h4>
+                <p>資金未能足額募集致無法完成支付總價款，交易終止。</p>
+            </div>
+            <div class="sec-card">
+                <h4>契約未促成</h4>
+                <p>期限內未能與業主簽訂正式買賣契約，交易終止。</p>
+            </div>
+            <div class="sec-card">
+                <h4>第三方因素</h4>
+                <p>地主拒售或不可歸責於承辦人之事由，交易終止。</p>
+            </div>
+            <div class="sec-card">
+                <h4>資金保全</h4>
+                <p>上述情形發生，認購款項全額無息原款退還。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="planning-doc">
+        <span class="section-tag">SITE PLANNING & SCENERY</span>
+        <h2>潤德莊園實景拍攝</h2>
+        <div style="background:#fff; padding: 15px; border: 1px solid #eee; border-radius: 8px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 25px; border-radius: 4px; overflow: hidden;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/3_-8eB5x4YA?rel=0&autoplay=1&mute=1&loop=1&playlist=3_-8eB5x4YA" 
+                    title="潤德莊園實景拍攝" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <h3 class="serif" style="margin: 20px 0; color: var(--forest-deep); font-size: 1.3rem;">環 境 總 覽 圖</h3>
+            <img src="https://raw.githubusercontent.com/hao713949/Dagui-Section/main/map2.jpg" alt="環境總覽圖" class="clickable-map" onclick="openLightbox(this.src, '環境總覽圖')" loading="lazy">
+            <p style="color: #666; margin: 20px 0; font-size: 1rem; line-height: 1.7; padding: 0 10px;">
+                ※ 鄰近台中市立醫院、74快速道路，約 5-6 分鐘車程。(點擊可放大)
+            </p>
+        </div>
+    </section>
+
+    <section id="page8">
+        <span class="section-tag">LOCATION</span>
+        <h2>潤德莊園地理位置</h2>
+        <div class="decoration-line">
+            <p style="font-size: 1.2rem; font-weight: 500;">台中市北屯區大貴段｜潤德莊園</p>
+        </div>
+        <div class="map-container">
+            <div class="map-overlay-label">基地位置</div>
+            <iframe 
+                title="Google Map Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.115!2d120.746010!3d24.164792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917e7c8524d77%3A0x7d25e0b0e504c568!2z5r2k5b636I6K5ZyS!5e0!3m2!1szh-TW!2stw!4v1714876000000!5m2!1szh-TW!2stw" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/uXv7Vj6BqC2hYfUa8" target="_blank" rel="noopener noreferrer" class="map-btn">
+            開啟 Google 地圖導引
+        </a>
+    </section>
+
+    <section class="legacy-section">
+        <div class="legacy-text">
+            <p style="color: var(--forest-mid); letter-spacing: 2px; margin-bottom: 10px;">偉大的建築，總在山坡定義。</p>
+            <span class="legacy-tag">LEGACY & HONOR</span>
+            <h2 class="legacy-h2 serif">居山藏鋒 大器天成<br>不爭一時，待一方境地</h2>
+            <div class="legacy-quote">
+                <p>從香港太平山到台北陽明山，真正被記住的，從來不是豪宅，而是地形。</p>
+                <p>【大貴段・潤德莊園】</p>
+                <p>在城市之內，山林之上，一座，無法被複製的山中之地</p>
+                <p style="font-weight: 700; color: var(--forest-deep);">為家族，留下一座，足以傳承的建築。</p>
+            </div>
+        </div>
+        <div class="legacy-slider-container" id="legacySlider">
+            <div class="legacy-slider-item active" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style1.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style2.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style3.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style4.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style5.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style6.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style7.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style8.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style9.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style10.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style11.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style12.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style13.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style14.jpg')"></div>
+            <div class="legacy-slider-item" style="background-image: url('https://raw.githubusercontent.com/hao713949/Dagui-Section/main/style15.jpg')"></div>
+        </div>
+    </section>
+
+    <footer style="padding: 80px 8% 60px; text-align: center; background: #fff; border-top: 1px solid #f0f0f0;">
+        <p class="serif" style="font-size: 1.35rem; color: var(--forest-deep); margin-bottom: 12px;">大貴段｜潤德莊園 ‧ 專案代理</p>
+        <p style="color: #888; font-size: 0.95rem;">本合購說明僅供特定對象參考<br> 專案導覽： 0912 713 949 蔡先生 </p>
+        <p style="color: #ccc; font-size: 0.8rem; margin-top: 30px; letter-spacing: 1.5px;">© 2026 PRECIOUS LAND COLLECTION. ALL RIGHTS RESERVED.</p>
+    </footer>
+        <script>
+        let currentGalleryIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function updateMain(index) {
+            currentGalleryIndex = index;
+            const mainImg = document.getElementById('active-main-img');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const label = document.getElementById('main-label');
+            const thumbs = document.querySelectorAll('.thumb-item');
+            
+            const currentData = galleryImages[currentGalleryIndex];
+
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = currentData.url;
+                label.innerText = currentData.title;
+                mainImg.style.opacity = '1';
+            }, 200);
+
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                lightboxImg.src = currentData.url;
+                lightboxCaption.innerText = currentData.title;
+            }
+
+            thumbs.forEach((t, i) => {
+                t.classList.toggle('active', i === currentGalleryIndex);
+            });
+
+            const container = document.getElementById('thumb-container');
+            const activeThumb = thumbs[currentGalleryIndex];
+            if(activeThumb) {
+                container.scrollTo({
+                    left: activeThumb.offsetLeft - (container.offsetWidth / 2) + (activeThumb.offsetWidth / 2),
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function changeSlide(step) {
+            let newIndex = currentGalleryIndex + step;
+            if (newIndex >= galleryImages.length) newIndex = 0;
+            if (newIndex < 0) newIndex = galleryImages.length - 1;
+            updateMain(newIndex);
+        }
+
+        function openLightbox(src, title) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lbPrev = document.querySelector('.lb-prev');
+            const lbNext = document.querySelector('.lb-next');
+            
+            const isGallery = galleryImages.some(img => img.url === src);
+            
+            if (isGallery) {
+                lbPrev.style.display = 'flex';
+                lbNext.style.display = 'flex';
+                lightboxImg.src = galleryImages[currentGalleryIndex].url;
+                lightboxCaption.innerText = galleryImages[currentGalleryIndex].title;
+            } else {
+                lbPrev.style.display = 'none';
+                lbNext.style.display = 'none';
+                lightboxImg.src = src;
+                lightboxCaption.innerText = title || "";
+            }
+            
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function handleLightboxClick(event) {
+            if (event.target.id === 'lightbox' || event.target.id === 'lightbox-img') {
+                closeLightbox();
+            }
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+
+        const lightboxEl = document.getElementById('lightbox');
+
+        lightboxEl.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        lightboxEl.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        }, {passive: true});
+
+        function handleGesture() {
+            if (document.querySelector('.lb-prev').style.display !== 'none') {
+                const threshold = 50;
+                if (touchEndX < touchStartX - threshold) {
+                    changeSlide(1);
+                }
+                if (touchEndX > touchStartX + threshold) {
+                    changeSlide(-1);
+                }
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === "Escape") closeLightbox();
+                if (document.querySelector('.lb-prev').style.display !== 'none') {
+                    if (e.key === "ArrowRight") changeSlide(1);
+                    if (e.key === "ArrowLeft") changeSlide(-1);
+                }
+            }
+        });
+
+        (function() {
+            const slides = document.querySelectorAll('.legacy-slider-item');
+            let currentSlide = 0;
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            setInterval(nextSlide, 4000); 
+        })();
+    </script>
+</body>
+</html>
